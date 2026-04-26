@@ -3,6 +3,7 @@
 > 基于 Coze 平台搭建的电商领域 AI 智能客服机器人，集成知识库检索、自动建议、多轮对话能力。
 <img width="960" height="456" alt="4d04405140896a41924617af5f0b51da" src="https://github.com/user-attachments/assets/a2f91b7e-4569-4f06-9efd-503a5479d81c" />
 <img width="960" height="456" alt="f69d065111c897d8a3e9d10bfa4dc638" src="https://github.com/user-attachments/assets/d1a82829-c5bb-4c62-912a-c8aaec0cecf1" />
+<img width="960" height="456" alt="5d94ce26eb0b254b62685b518d07f085" src="https://github.com/user-attachments/assets/7d5115f9-5cca-40f7-be9e-14f131e8b1fa" />
 
 ## 功能特性
 
