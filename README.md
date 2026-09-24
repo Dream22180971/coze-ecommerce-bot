@@ -19,6 +19,38 @@ Existing Coze screenshots are kept below. / 现有 Coze 演示截图保留在下
 3. Configure the model and publish / 配置模型并发布
 ```
 
+> **EN:** This is a platform-based project, so the fastest start is configuration rather than a local build.  
+> **中文：** 这是平台型项目，因此最快的启动方式是完成 Coze 配置，而不是本地编译。
+
+## Why this project / 为什么做这个项目
+
+**EN:** This project demonstrates the shortest path from a repetitive ecommerce support problem to a usable knowledge-base bot.
+
+**中文：** 这个项目演示如何把重复电商客服问题快速转成可用的知识库机器人。
+
+---
+
+Build a knowledge-base-powered ecommerce support bot with Coze without writing application code. / 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+
+<!-- README-V2-BILINGUAL -->
+
+# coze-ecommerce-bot
+
+> **EN:** Build a knowledge-base-powered ecommerce support bot with Coze without writing application code.  
+> **中文：** 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+
+## Demo / 演示
+
+Existing Coze screenshots are kept below. / 现有 Coze 演示截图保留在下方。
+
+## Quick Start / 5 分钟快速开始
+
+```text
+1. Import/create the bot in Coze / 在 Coze 创建或导入 Bot
+2. Upload the knowledge-base files from this repo / 上传仓库中的知识库文件
+3. Configure the model and publish / 配置模型并发布
+```
+
 > **EN:** The commands above are intentionally kept short: clone, install, run. Project-specific configuration and advanced usage stay in the detailed documentation below.  
 > **中文：** 上面的命令刻意保持最短路径：克隆、安装、运行。项目特定配置与高级用法继续保留在下方详细文档中。
 
