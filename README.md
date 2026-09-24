@@ -1,219 +1,136 @@
-Build a knowledge-base-powered ecommerce support bot with Coze without writing application code. / 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+<div align="center">
 
-<!-- README-V2-BILINGUAL -->
+# Coze Ecommerce Support Bot
 
-# coze-ecommerce-bot
+**Build a knowledge-base-powered ecommerce support bot with Coze without writing application code.**
 
-> **EN:** Build a knowledge-base-powered ecommerce support bot with Coze without writing application code.  
-> **中文：** 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-## Demo / 演示
+[![Coze](https://img.shields.io/badge/Coze-Platform-7C3AED?style=for-the-badge)](https://www.coze.cn/)
+[![Knowledge Base](https://img.shields.io/badge/RAG-Knowledge+Base-2563EB?style=for-the-badge)](#-knowledge-base)
+[![No Code](https://img.shields.io/badge/BUILD-No--Code-111827?style=for-the-badge)](#-quick-start)
+[![License](https://img.shields.io/badge/LICENSE-MIT-10B981?style=for-the-badge)](./LICENSE)
 
-Existing Coze screenshots are kept below. / 现有 Coze 演示截图保留在下方。
-
-## Quick Start / 5 分钟快速开始
-
-```text
-1. Import/create the bot in Coze / 在 Coze 创建或导入 Bot
-2. Upload the knowledge-base files from this repo / 上传仓库中的知识库文件
-3. Configure the model and publish / 配置模型并发布
-```
-
-> **EN:** This is a platform-based project, so the fastest start is configuration rather than a local build.  
-> **中文：** 这是平台型项目，因此最快的启动方式是完成 Coze 配置，而不是本地编译。
-
-## Why this project / 为什么做这个项目
-
-**EN:** This project demonstrates the shortest path from a repetitive ecommerce support problem to a usable knowledge-base bot.
-
-**中文：** 这个项目演示如何把重复电商客服问题快速转成可用的知识库机器人。
+</div>
 
 ---
 
-# Coze 电商智能客服
+## 🎯 What it is
 
-> 零代码搭建电商 AI 客服——上传知识库文档，自动回答退货、物流、支付等问题。
-<img width="960" height="456" alt="4d04405140896a41924617af5f0b51da" src="https://github.com/user-attachments/assets/a2f91b7e-4569-4f06-9efd-503a5479d81c" />
-<img width="960" height="456" alt="f69d065111c897d8a3e9d10bfa4dc638" src="https://github.com/user-attachments/assets/d1a82829-c5bb-4c62-912a-c8aaec0cecf1" />
-<img width="960" height="456" alt="5d94ce26eb0b254b62685b518d07f085" src="https://github.com/user-attachments/assets/7d5115f9-5cca-40f7-be9e-14f131e8b1fa" />
+A platform-based ecommerce support bot built with Coze, a prompt, and a small knowledge base.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Coze](https://img.shields.io/badge/Coze-Platform-blueviolet?style=flat)](https://www.coze.cn/)
-[![Qwen](https://img.shields.io/badge/LLM-通义千问-orange?style=flat)](https://dashscope.console.aliyun.com/)
+The repository focuses on a simple use case: repetitive customer questions such as returns, logistics and payment.
 
 ---
 
-## 目录
+## 🎬 Demo
 
-- [它是什么](#它是什么)
-- [为什么做](#为什么做)
-- [核心功能](#核心功能)
-- [快速开始](#快速开始)
-- [使用示例](#使用示例)
-- [知识库内容](#知识库内容)
-- [技术架构](#技术架构)
-- [面试亮点](#面试亮点)
-- [Roadmap](#roadmap)
-- [谁适合用](#谁适合用)
-- [关于我](#关于我)
+<div align="center">
+
+<img width="88%" alt="Coze ecommerce support bot" src="https://github.com/user-attachments/assets/a2f91b7e-4569-4f06-9efd-503a5479d81c" />
+
+<img width="88%" alt="Coze knowledge workflow" src="https://github.com/user-attachments/assets/d1a82829-c5bb-4c62-912a-c8aaec0cecf1" />
+
+</div>
 
 ---
 
-## 它是什么
+## ⚡ Quick Start
 
-一个**基于 Coze 平台的电商 AI 客服机器人**，帮你做三件事：
+This project is configured in Coze rather than built locally.
 
-1. **自动回答客户问题**：退货流程、物流查询、支付方式，AI 秒回
-2. **知识库驱动**：上传 Markdown 文档，AI 自动从文档中找答案
-3. **多渠道发布**：Coze Agent Store、网页嵌入、API 接入，一键上线
-
-不需要写代码，只需要在 Coze 平台上传知识库文档，就能跑起来。
-
----
-
-## 为什么做
-
-电商客服最头疼的不是复杂问题，而是**同一个问题每天被问 100 遍**——"退货流程是什么？""发货要几天？""支持微信支付吗？"
-
-人工客服成本高，传统机器人又太死板。
-
-这个项目的思路：**用 Coze 平台 + 大模型，零代码搭一个能理解自然语言的智能客服**。客户用正常的话问，AI 从知识库找答案，不像关键词匹配那么笨。
+1. Create or import a bot in Coze.
+2. Upload the Markdown files from `knowledge/`.
+3. Wait for the platform to chunk and index the documents.
+4. Connect the knowledge base to the bot / workflow.
+5. Test representative customer questions.
+6. Publish to the channel you need.
 
 ---
 
-## 核心功能
+## 📚 Knowledge Base
 
-| 你能做什么 | 说明 |
-|-----------|------|
-| **专业客服人设** | 电商场景专属 Prompt，语气友好专业 |
-| **知识库问答** | 内置 3 份电商文档，AI 自动检索回答 |
-| **智能推荐** | 自动建议用户可能想问的问题 |
-| **开场白引导** | 预设欢迎语，提升用户体验 |
-| **多渠道发布** | Agent Store / 网页 / API 多端接入 |
+The repository includes example policy content for common ecommerce support topics:
 
----
-
-## 快速开始
-
-### 第 1 步：导入 Bot
-
-1. 访问 [Coze 官网](https://www.coze.cn/) 并登录
-2. 进入 Agent Store 或使用 Bot 链接导入
-3. Fork 此仓库作为知识库备份
-
-### 第 2 步：配置知识库
-
-在 Coze 平台操作：
-
-1. 打开 Bot → 左侧 **Knowledge** 模块
-2. 点击 **Create knowledge base**
-3. 上传 `knowledge/` 目录下的 3 个 `.md` 文件
-4. 等待分片和索引完成（约 1-2 分钟）
-5. 在 Workflow 中关联知识库节点
-
-### 第 3 步：测试验证
-
-在 Preview 中测试以下问题：
-
-| 测试问题 | 预期回答来源 |
-|----------|-------------|
-| 退货流程是什么？ | 退换货政策.md |
-| 发货要几天？ | 物流配送政策.md |
-| 支持哪些支付方式？ | 产品常见问题FAQ.md |
-| 怎么联系客服？ | 产品常见问题FAQ.md |
+| Document area | Typical questions |
+|---|---|
+| FAQ | accounts, orders, payment, coupons, membership |
+| Returns | eligibility, process, refund timing |
+| Logistics | delivery time, shipping fee, tracking and exceptions |
 
 ---
 
-## 使用示例
+## 🧪 Suggested Test Set
 
-**客户问**："我买的衣服不合适，怎么退？"
+Do not validate the bot with only one happy-path question.
 
-**AI 回答**：您好！退货流程如下：
-1. 在"我的订单"中找到对应订单
-2. 点击"申请退货"
-3. 选择退货原因并提交
-4. 等待审核（1-2 个工作日）
-5. 审核通过后寄回商品
+Test at least:
 
-7 天无理由退货，商品需保持原包装完好……
-
----
-
-## 知识库内容
-
-| 文档 | 内容 |
-|------|------|
-| **产品常见问题FAQ** | 16 条高频 Q&A：账户、订单、支付、优惠券、会员等 |
-| **退换货政策** | 7 天无理由退货条件、退货流程、退款时效、特殊商品规则 |
-| **物流配送政策** | 配送范围与时效、运费标准、物流跟踪、异常处理 |
+| Test | What to check |
+|---|---|
+| “How do I return an item?” | correct policy and steps |
+| “How long does delivery take?” | correct logistics source |
+| “What payment methods are supported?” | correct FAQ retrieval |
+| unsupported question | does not invent a policy |
+| ambiguous wording | asks or answers appropriately |
+| conflicting documents | retrieval behavior remains understandable |
 
 ---
 
-## 技术架构
+## 🧩 Architecture
 
-```
-┌──────────────────────────────────┐
-│     Coze 平台                    │
-│  Bot · Prompt · Workflow         │
-├──────────────────────────────────┤
-│     知识库层                     │
-│  Markdown 文档 → Coze 分片索引   │
-├──────────────────────────────────┤
-│     AI 模型层                    │
-│  通义千问 (Qwen)                 │
-├──────────────────────────────────┤
-│     发布渠道                     │
-│  Agent Store · 网页 · API        │
-└──────────────────────────────────┘
+```mermaid
+flowchart TB
+    U[Customer] --> B[Coze Bot]
+    B --> P[Prompt / Persona]
+    B --> R[Knowledge Retrieval]
+    R --> K[(Markdown Knowledge Base)]
+    B --> L[LLM]
+    L --> A[Answer]
 ```
 
 ---
 
-## 面试亮点
+## 💡 What this project demonstrates
 
-这个项目适合作为 **AI Agent 应用层** 的面试展示：
-
-1. **低代码平台能力** — 展示对 Coze/Dify 等平台的理解
-2. **Prompt Engineering** — 人设 Prompt 设计与调优
-3. **RAG 实践** — 知识库构建、文档分片、检索效果优化
-4. **产品思维** — 从 0 到 1 完成客服机器人上线全流程
-
----
-
-## Roadmap
-
-- [x] 3 份知识库文档（FAQ / 退换货 / 物流）
-- [x] 专业客服人设 Prompt
-- [x] 智能推荐 + 开场白
-- [ ] 接入微信公众号 / 飞书 / 钉钉
-- [ ] 开启对话记忆，支持多轮上下文
-- [ ] 接入外部 API（查订单、查物流实时状态）
-- [ ] 增加更多知识库文档（商品详情、促销活动）
-- [ ] 配置人机协作，复杂问题转人工
+- low-code / no-code AI application building
+- prompt design
+- knowledge-base configuration
+- basic RAG thinking
+- scenario-based bot testing
+- deployment through a managed agent platform
 
 ---
 
-## 谁适合用
+## ⚠️ Current Limitations
 
-- **电商创业者**：快速搭一个能用的 AI 客服，省掉人工成本
-- **想学 AI Agent 的人**：Coze 平台从 0 到 1 的完整案例
-- **面试准备者**：RAG + Prompt Engineering 的轻量级展示项目
-- **产品经理**：了解低代码 AI 平台的能力边界
-
----
-
-## 关于我
-
-我是**肖恩沃尔特**（Sean Walter），一个从测试工程师正在转型为 AI 独立开发者的程序员。
-
-这个项目是我探索"零代码 AI 应用"的起点——不写代码，只靠平台和知识库，也能搭出有用的 AI 产品。
-
-- GitHub: [Dream22180971](https://github.com/Dream22180971)
-- Twitter/X: [@sean_walter0717](https://x.com/sean_walter0717)
-- 博客: [seanwalter.top](https://seanwalter.top)
+- behavior depends on Coze platform capabilities and configuration
+- this repository does not contain a self-hosted backend
+- live order / logistics queries require external API integrations
+- production customer service still needs escalation and human handoff design
 
 ---
 
-## License
+## 🗺 Roadmap
+
+- [x] FAQ / return / logistics knowledge
+- [x] customer-service prompt
+- [x] Coze knowledge retrieval
+- [ ] order-status API
+- [ ] logistics API
+- [ ] conversation memory
+- [ ] human escalation
+- [ ] evaluation dataset
+- [ ] more support channels
+
+---
+
+## 📄 License
 
 [MIT](./LICENSE)
+
+<div align="center">
+
+**Start with the repeated questions. Add automation only where the knowledge is reliable.**
+
+</div>
