@@ -1,3 +1,36 @@
+Build a knowledge-base-powered ecommerce support bot with Coze without writing application code. / 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+
+<!-- README-V2-BILINGUAL -->
+
+# coze-ecommerce-bot
+
+> **EN:** Build a knowledge-base-powered ecommerce support bot with Coze without writing application code.  
+> **中文：** 用 Coze 零代码搭建知识库驱动的电商 AI 客服。
+
+## Demo / 演示
+
+Existing Coze screenshots are kept below. / 现有 Coze 演示截图保留在下方。
+
+## Quick Start / 5 分钟快速开始
+
+```text
+1. Import/create the bot in Coze / 在 Coze 创建或导入 Bot
+2. Upload the knowledge-base files from this repo / 上传仓库中的知识库文件
+3. Configure the model and publish / 配置模型并发布
+```
+
+> **EN:** The commands above are intentionally kept short: clone, install, run. Project-specific configuration and advanced usage stay in the detailed documentation below.  
+> **中文：** 上面的命令刻意保持最短路径：克隆、安装、运行。项目特定配置与高级用法继续保留在下方详细文档中。
+
+## Why this project / 为什么做这个项目
+
+**EN:** This repository is built around one concrete problem and aims to be understandable, runnable and useful before becoming complex.
+
+**中文：** 这个仓库围绕一个明确问题构建，优先做到易理解、能运行、真正有用，再逐步增加复杂能力。
+
+---
+
+<!-- ORIGINAL-DOCS -->
 # Coze 电商智能客服
 
 > 零代码搭建电商 AI 客服——上传知识库文档，自动回答退货、物流、支付等问题。
