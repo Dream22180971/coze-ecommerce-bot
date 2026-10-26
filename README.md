@@ -1,127 +1,127 @@
 <div align="center">
 
-# Coze Ecommerce Support Bot
+# Coze 电商智能客服
 
-**Build a knowledge-base-powered ecommerce support bot with Coze without writing application code.**
+**用 Coze 零代码搭建一个由知识库驱动的电商 AI 客服。**
 
-[English](./README.md) | [简体中文](./README.zh-CN.md)
+[简体中文](./README.md) | [English](./README.en.md)
 
 [![Coze](https://img.shields.io/badge/Coze-Platform-7C3AED?style=for-the-badge)](https://www.coze.cn/)
-[![Knowledge Base](https://img.shields.io/badge/RAG-Knowledge+Base-2563EB?style=for-the-badge)](#-knowledge-base)
-[![No Code](https://img.shields.io/badge/BUILD-No--Code-111827?style=for-the-badge)](#-quick-start)
+[![Knowledge Base](https://img.shields.io/badge/RAG-Knowledge+Base-2563EB?style=for-the-badge)](#-知识库)
+[![No Code](https://img.shields.io/badge/BUILD-No--Code-111827?style=for-the-badge)](#-快速开始)
 [![License](https://img.shields.io/badge/LICENSE-MIT-10B981?style=for-the-badge)](./LICENSE)
 
 </div>
 
 ---
 
-## 🎯 What it is
+## 🎯 它是什么
 
-A platform-based ecommerce support bot built with Coze, a prompt, and a small knowledge base.
+一个基于 Coze 平台、Prompt 和小型知识库搭建的电商客服 Bot。
 
-The repository focuses on a simple use case: repetitive customer questions such as returns, logistics and payment.
+重点解决的是退换货、物流、支付等每天重复出现的客服问题。
 
 ---
 
-## 🎬 Demo
+## 🎬 演示
 
 <div align="center">
 
-<img width="88%" alt="Coze ecommerce support bot" src="https://github.com/user-attachments/assets/a2f91b7e-4569-4f06-9efd-503a5479d81c" />
+<img width="88%" alt="Coze 电商客服" src="https://github.com/user-attachments/assets/a2f91b7e-4569-4f06-9efd-503a5479d81c" />
 
-<img width="88%" alt="Coze knowledge workflow" src="https://github.com/user-attachments/assets/d1a82829-c5bb-4c62-912a-c8aaec0cecf1" />
+<img width="88%" alt="Coze 知识库工作流" src="https://github.com/user-attachments/assets/d1a82829-c5bb-4c62-912a-c8aaec0cecf1" />
 
 </div>
 
 ---
 
-## ⚡ Quick Start
+## ⚡ 快速开始
 
-This project is configured in Coze rather than built locally.
+这是平台配置型项目，不需要本地编译。
 
-1. Create or import a bot in Coze.
-2. Upload the Markdown files from `knowledge/`.
-3. Wait for the platform to chunk and index the documents.
-4. Connect the knowledge base to the bot / workflow.
-5. Test representative customer questions.
-6. Publish to the channel you need.
+1. 在 Coze 创建或导入 Bot。
+2. 上传 `knowledge/` 下的 Markdown 文档。
+3. 等待平台完成切片和索引。
+4. 在 Bot / Workflow 中关联知识库。
+5. 用代表性的客服问题验证回答。
+6. 发布到需要的渠道。
 
 ---
 
-## 📚 Knowledge Base
+## 📚 知识库
 
-The repository includes example policy content for common ecommerce support topics:
+仓库包含常见电商客服政策示例：
 
-| Document area | Typical questions |
+| 文档方向 | 常见问题 |
 |---|---|
-| FAQ | accounts, orders, payment, coupons, membership |
-| Returns | eligibility, process, refund timing |
-| Logistics | delivery time, shipping fee, tracking and exceptions |
+| FAQ | 账户、订单、支付、优惠券、会员 |
+| 退换货 | 条件、流程、退款时效 |
+| 物流 | 配送时效、运费、查询、异常处理 |
 
 ---
 
-## 🧪 Suggested Test Set
+## 🧪 建议测试集
 
-Do not validate the bot with only one happy-path question.
+不要只用一条正常问题证明“Bot 能回答”。
 
-Test at least:
+至少测试：
 
-| Test | What to check |
+| 测试 | 关注点 |
 |---|---|
-| “How do I return an item?” | correct policy and steps |
-| “How long does delivery take?” | correct logistics source |
-| “What payment methods are supported?” | correct FAQ retrieval |
-| unsupported question | does not invent a policy |
-| ambiguous wording | asks or answers appropriately |
-| conflicting documents | retrieval behavior remains understandable |
+| “怎么退货？” | 是否命中正确政策和步骤 |
+| “多久发货？” | 是否来自物流知识 |
+| “支持哪些支付方式？” | 是否命中 FAQ |
+| 知识库外问题 | 是否会编造不存在的规则 |
+| 模糊表达 | 是否能合理澄清或回答 |
+| 文档冲突 | 检索行为是否可解释 |
 
 ---
 
-## 🧩 Architecture
+## 🧩 技术架构
 
 ```mermaid
 flowchart TB
-    U[Customer] --> B[Coze Bot]
-    B --> P[Prompt / Persona]
-    B --> R[Knowledge Retrieval]
-    R --> K[(Markdown Knowledge Base)]
+    U[客户] --> B[Coze Bot]
+    B --> P[Prompt / 人设]
+    B --> R[知识检索]
+    R --> K[(Markdown 知识库)]
     B --> L[LLM]
-    L --> A[Answer]
+    L --> A[回答]
 ```
 
 ---
 
-## 💡 What this project demonstrates
+## 💡 这个项目能证明什么
 
-- low-code / no-code AI application building
-- prompt design
-- knowledge-base configuration
-- basic RAG thinking
-- scenario-based bot testing
-- deployment through a managed agent platform
-
----
-
-## ⚠️ Current Limitations
-
-- behavior depends on Coze platform capabilities and configuration
-- this repository does not contain a self-hosted backend
-- live order / logistics queries require external API integrations
-- production customer service still needs escalation and human handoff design
+- 低代码 / 零代码 AI 应用搭建
+- Prompt 设计
+- 知识库配置
+- 基础 RAG 思维
+- 场景化 Bot 测试
+- 托管 Agent 平台发布流程
 
 ---
 
-## 🗺 Roadmap
+## ⚠️ 当前限制
 
-- [x] FAQ / return / logistics knowledge
-- [x] customer-service prompt
-- [x] Coze knowledge retrieval
-- [ ] order-status API
-- [ ] logistics API
-- [ ] conversation memory
-- [ ] human escalation
-- [ ] evaluation dataset
-- [ ] more support channels
+- 行为依赖 Coze 平台能力和配置
+- 仓库本身没有自托管后端
+- 实时订单 / 物流查询需要外部 API
+- 真正生产客服仍然需要转人工和异常升级机制
+
+---
+
+## 🗺 路线图
+
+- [x] FAQ / 退换货 / 物流知识
+- [x] 客服 Prompt
+- [x] Coze 知识检索
+- [ ] 订单状态 API
+- [ ] 物流 API
+- [ ] 对话记忆
+- [ ] 转人工
+- [ ] 评测数据集
+- [ ] 更多渠道
 
 ---
 
@@ -131,6 +131,6 @@ flowchart TB
 
 <div align="center">
 
-**Start with the repeated questions. Add automation only where the knowledge is reliable.**
+**先解决重复问题，再把自动化建立在可靠知识之上。**
 
 </div>
